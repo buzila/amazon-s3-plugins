@@ -48,10 +48,13 @@ public class S3BatchSink extends AbstractFileSink<S3BatchSink.S3BatchSinkConfig>
   private static final String S3A_ACCESS_KEY = "fs.s3a.access.key";
   private static final String S3A_SECRET_KEY = "fs.s3a.secret.key";
   private static final String S3A_ENCRYPTION = "fs.s3a.server-side-encryption-algorithm";
+  private static final String S3A_ENDPOINT   = "fs.s3a.endpoint";
+  private static final String S3A_REGION     = "fs.s3a.s3guard.ddb.region";
 
   private static final String S3N_ACCESS_KEY = "fs.s3n.awsAccessKeyId";
   private static final String S3N_SECRET_KEY = "fs.s3n.awsSecretAccessKey";
   private static final String S3N_ENCRYPTION = "fs.s3n.server-side-encryption-algorithm";
+  private static final String S3N_ENDPOINT   = "fs.s3n.endpoint";
   private static final String ACCESS_CREDENTIALS = "Access Credentials";
 
   private final S3BatchSinkConfig config;
@@ -69,9 +72,12 @@ public class S3BatchSink extends AbstractFileSink<S3BatchSink.S3BatchSinkConfig>
       if (config.path.startsWith("s3a://")) {
         properties.put(S3A_ACCESS_KEY, config.accessID);
         properties.put(S3A_SECRET_KEY, config.accessKey);
+        properties.put(S3A_ENDPOINT, "storage.yandexcloud.net");
+        properties.put(S3A_REGION, "ru-central1");
       } else if (config.path.startsWith("s3n://")) {
         properties.put(S3N_ACCESS_KEY, config.accessID);
         properties.put(S3N_SECRET_KEY, config.accessKey);
+        properties.put(S3N_ENDPOINT, "storage.yandexcloud.net");
       }
     }
 
