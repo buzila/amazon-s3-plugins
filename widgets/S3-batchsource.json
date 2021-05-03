@@ -2,7 +2,7 @@
   "metadata": {
     "spec-version": "1.5"
   },
-  "display-name": "Amazon S3",
+  "display-name": "Yandex Storage (S3)",
   "configuration-groups": [
     {
       "label": "Basic",
@@ -96,15 +96,15 @@
           "label": "Access ID",
           "name": "accessID",
           "widget-attributes": {
-            "placeholder": "Amazon Access ID"
+            "placeholder": "Yandex Access ID"
           }
         },
         {
           "widget-type": "password",
-          "label": "Access Key",
+          "label": "Access Secret",
           "name": "accessKey",
           "widget-attributes": {
-            "placeholder": "Amazon Access Key"
+            "placeholder": "Yandex Access Secret"
           }
         }
       ]
