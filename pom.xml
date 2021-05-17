@@ -8,7 +8,7 @@
   <artifactId>amazon-s3-plugins</artifactId>
   <version>1.15.0-SNAPSHOT</version>
   <description>Plugins for Amazon S3</description>
-  <url>https://github.com/data-integrations/amazon-s3-plugins</url>
+  <url>https://github.com/buzila/amazon-s3-plugins</url>
 
   <licenses>
     <license>
@@ -41,45 +41,22 @@
 
   <distributionManagement>
     <repository>
-      <id>sonatype.release</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      <id>cdap-releases</id>
+      <url>http://nexus-repo-cdap.ru-central1.internal:8081/repository/cdap-releases</url>
     </repository>
     <snapshotRepository>
-      <id>sonatype.snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <id>cdap-snapshots</id>
+      <url>http://nexus-repo-cdap.ru-central1.internal:8081/repository/cdap-snapshots</url>
     </snapshotRepository>
   </distributionManagement>
 
-  <repositories>
-    <repository>
-      <id>sonatype</id>
-      <url>https://oss.sonatype.org/content/groups/public</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
-      <id>sonatype-snapshots</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-      <releases>
-        <enabled>false</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <cdap.version>6.1.1</cdap.version>
-    <cdap.plugin.version>2.6.0-SNAPSHOT</cdap.plugin.version>
+    <cdap.version>6.5.0-DataProc-SNAPSHOT</cdap.version>
+    <cdap.plugin.version>2.7.0-SNAPSHOT</cdap.plugin.version>
     <data.pipeline.parent>system:cdap-data-pipeline[6.1.0-SNAPSHOT, 7.0.0-SNAPSHOT)</data.pipeline.parent>
     <data.stream.parent>system:cdap-data-streams[6.1.0-SNAPSHOT, 7.0.0-SNAPSHOT)</data.stream.parent>
-    <hadoop.version>2.8.0</hadoop.version>
+    <hadoop.version>2.10.0</hadoop.version>
     <main.basedir>${project.basedir}</main.basedir>
   </properties>
 
