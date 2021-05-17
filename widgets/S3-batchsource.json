@@ -19,7 +19,7 @@
           "widget-type": "connection-browser",
           "widget-category": "plugin",
           "widget-attributes": {
-            "connectionType": "S3",
+            "connectionType": "YandexS3",
             "label": "Browse"
           }
         },
